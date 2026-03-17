@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmosfera — Weather</title>
+  <link rel="stylesheet" href="weather.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+ 
+  <main>
+    <header class="app-header">
+      <span class="app-logo"><i class="fa-solid fa-wind"></i></span>
+      <span class="app-name">Atmosfera</span>
+    </header>
+ 
+    <form action="">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" autocomplete="off" placeholder="Search city…">
+      <button type="submit" aria-label="Search">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+ 
+    <section class="result">
+      <figure class="name">
+        <img class="flag" src="https://flagsapi.com/GB/shiny/32.png" alt="Flag">
+        <figcaption>London</figcaption>
+      </figure>
+ 
+      <div class="weather-hero">
+        <figure class="temperature">
+          <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="Weather icon">
+          <figcaption>
+            <span class="temp-value">31</span>
+            <sup class="temp-unit">°C</sup>
+          </figcaption>
+        </figure>
+      </div>
+ 
+      <p class="description">Overcast Clouds</p>
+ 
+      <ul class="stats">
+        <li class="stat-card stat-clouds">
+          <i class="fa-solid fa-cloud"></i>
+          <span class="stat-value clouds">98</span>
+          <span class="stat-label">Cloud cover<em>%</em></span>
+        </li>
+        <li class="stat-card stat-humidity">
+          <i class="fa-solid fa-droplet"></i>
+          <span class="stat-value humidity">55</span>
+          <span class="stat-label">Humidity<em>%</em></span>
+        </li>
+        <li class="stat-card stat-pressure">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span class="stat-value pressure">1001</span>
+          <span class="stat-label">Pressure<em>hPa</em></span>
+        </li>
+      </ul>
+    </section>
+  </main>
+ 
+  <script src="weather.js"></script>
+</body>
+</html>
