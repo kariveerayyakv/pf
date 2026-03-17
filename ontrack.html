@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontrack</title>
+    <link rel="stylesheet" href="ontrack.css">
+    <script src="ontrack.js" defer></script>
+</head>
+<body>
+
+<div class="header">
+    <div>
+        <h1>Ontrack</h1>
+        <p id="date"></p>
+    </div>
+    <div class="totals">
+        <div class="total-item">
+            <span>Today</span>
+            <strong id="todayTotal">₹0</strong>
+        </div>
+        <div class="divider"></div>
+        <div class="total-item">
+            <span>All time</span>
+            <strong id="allTotal">₹0</strong>
+        </div>
+    </div>
+</div>
+
+<div class="summary" id="summary">
+    <div class="summary-bar" id="summaryBar"></div>
+    <div class="summary-legend" id="summaryLegend"></div>
+</div>
+
+<div class="form-card">
+    <div class="form-row">
+        <div class="field field-wide">
+            <label>Amount</label>
+            <input type="number" id="amount" placeholder="₹ enter amount" min="1">
+            <div class="quick-picks">
+                <button type="button" class="qp qp-amount" onclick="setAmount(1000)">1000</button>
+                <button type="button" class="qp qp-amount" onclick="setAmount(1500)">1500</button>
+                <button type="button" class="qp qp-amount" onclick="setAmount(2000)">2000</button>
+            </div>
+        </div>
+        <div class="field field-wide">
+            <label>Category</label>
+            <input type="text" id="category" placeholder="enter category" autocomplete="off">
+            <div class="quick-picks">
+                <button type="button" class="qp qp-cat" onclick="setCat('Food')">Food</button>
+                <button type="button" class="qp qp-cat" onclick="setCat('Cloths')">Cloths</button>
+                <button type="button" class="qp qp-cat" onclick="setCat('Traveling')">Traveling</button>
+                
+            </div>
+        </div>
+        <div class="field field-note">
+            <label>Note</label>
+            <input type="text" id="note" placeholder="Why did you spend this?">
+        </div>
+    </div>
+    <button id="addBtn">Add</button>
+</div>
+
+<ul id="list"></ul>
+
+<button class="fab" id="fab">?</button>
+
+<div class="faq-panel" id="faqPanel">
+    <div class="faq-top">
+        <span>Finance Tips</span>
+        <button id="faqClose">✕</button>
+    </div>
+    <div class="faq-body">
+        <a class="faq-link" href="https://www.investopedia.com/articles/personal-finance/101014/50-30-20-budget-rule.asp" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>The 50/30/20 budgeting rule</span>
+        </a>
+        <a class="faq-link" href="https://www.investopedia.com/terms/i/impulse-buying.asp" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>How to stop impulse spending</span>
+        </a>
+        <a class="faq-link" href="https://www.nerdwallet.com/article/finance/how-to-save-money" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>Practical ways to save money</span>
+        </a>
+        <a class="faq-link" href="https://www.investopedia.com/terms/e/emergency-fund.asp" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>Why you need an emergency fund</span>
+        </a>
+        <a class="faq-link" href="https://www.moneycontrol.com/personal-finance/savings/how-to-track-your-daily-expenses-and-why-it-matters-12067301.html" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>Why tracking expenses matters</span>
+        </a>
+        <a class="faq-link" href="https://www.investopedia.com/terms/e/envelope-budgeting.asp" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>Envelope budgeting method</span>
+        </a>
+        <a class="faq-link" href="https://cleartax.in/s/how-to-reduce-monthly-expenses" target="_blank">
+            <span class="faq-icon">◈</span>
+            <span>Reducing monthly expenses (India)</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
