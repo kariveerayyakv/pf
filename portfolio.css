@@ -169,7 +169,7 @@ body:hover .cursor { opacity: 1; }
   position: absolute;
   opacity: 0;
   font-size: 1.4rem;
-  color: rgba(64,212,168,0.52);
+  color: rgba(64,212,168,0.32);
   animation: floatUp var(--dur, 18s) var(--delay, 0s) ease-in-out infinite;
   user-select: none;
   filter: blur(0.4px);
