@@ -156,6 +156,32 @@ body:hover .cursor { opacity: 1; }
   animation-duration: 22s; animation-delay: -8s;
 }
 
+
+.floaters {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floater {
+  position: absolute;
+  opacity: 0;
+  font-size: 1.4rem;
+  color: rgba(64,212,168,0.12);
+  animation: floatUp var(--dur, 18s) var(--delay, 0s) ease-in-out infinite;
+  user-select: none;
+  filter: blur(0.4px);
+}
+
+@keyframes floatUp {
+  0%   { opacity: 0;    transform: translateY(100vh) rotate(var(--rot0, 0deg)) scale(0.8); }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { opacity: 0;    transform: translateY(-120px) rotate(var(--rot1, 20deg)) scale(1.1); }
+}
+
 @keyframes blobDrift {
   from { transform: translate(0,0) scale(1); }
   to   { transform: translate(40px,30px) scale(1.12); }
@@ -370,7 +396,7 @@ section { padding: 110px 8%; scroll-margin-top: 100px; }
 }
 
 .about-text p {
-  color: var(--muted); margin-bottom: 16px;
+  color: #9aa0b8; margin-bottom: 16px;
   font-size: 0.91rem; line-height: 1.8;
 }
 
