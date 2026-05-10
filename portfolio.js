@@ -63,15 +63,12 @@ const FLOATERS = [
   { symbol: '✦',   label: 'star'    },
   { symbol: '⌨',   label: 'code'    },
   { symbol: '✒',   label: 'pen'     },
-  { symbol: '📐',  label: 'ruler'   },
   { symbol: '⚡',  label: 'bolt'    },
-  { symbol: '🏋',  label: 'gym'     },
   { symbol: '🥊',  label: 'box'     },
   { symbol: '⚽',  label: 'ball'    },
   { symbol: '♜',   label: 'rook'    },
-  { symbol: '∞',   label: 'inf'     },
-  { symbol: '△',   label: 'tri'     },
-  { symbol: '◇',   label: 'diam'    },
+  
+  
 ];
 
 function spawnFloaters() {
