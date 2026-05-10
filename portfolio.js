@@ -52,3 +52,55 @@ document.querySelectorAll('.about-card, .skill-pill, .project-card, .contact-ite
   el.style.transitionDelay = `${i * 0.06}s`;
   observer.observe(el);
 });
+
+const FLOATERS = [
+  { symbol: '</>',  label: 'html'    },
+  { symbol: '{ }',  label: 'css'     },
+  { symbol: 'Py',   label: 'python'  },
+  { symbol: 'JS',   label: 'js'      },
+  { symbol: '♞',   label: 'chess'   },
+  { symbol: '♟',   label: 'chess2'  },
+  { symbol: '✦',   label: 'star'    },
+  { symbol: '⌨',   label: 'code'    },
+  { symbol: '✒',   label: 'pen'     },
+  { symbol: '📐',  label: 'ruler'   },
+  { symbol: '⚡',  label: 'bolt'    },
+  { symbol: '🏋',  label: 'gym'     },
+  { symbol: '🥊',  label: 'box'     },
+  { symbol: '⚽',  label: 'ball'    },
+  { symbol: '♜',   label: 'rook'    },
+  { symbol: '∞',   label: 'inf'     },
+  { symbol: '△',   label: 'tri'     },
+  { symbol: '◇',   label: 'diam'    },
+];
+
+function spawnFloaters() {
+  const container = document.getElementById('floaters');
+  if (!container) return;
+
+  FLOATERS.forEach((item, i) => {
+    const el = document.createElement('span');
+    el.classList.add('floater');
+    el.textContent = item.symbol;
+
+    const x    = 2 + Math.random() * 96;
+    const dur  = 14 + Math.random() * 14;
+    const del  = -(Math.random() * dur);
+    const rot0 = (Math.random() - 0.5) * 40;
+    const rot1 = rot0 + (Math.random() - 0.5) * 30;
+    const size = 0.8 + Math.random() * 1.4;
+
+    el.style.cssText = `
+      left: ${x}%;
+      --dur: ${dur}s;
+      --delay: ${del}s;
+      --rot0: ${rot0}deg;
+      --rot1: ${rot1}deg;
+      font-size: ${size}rem;
+    `;
+
+    container.appendChild(el);
+  });
+}
+
+spawnFloaters();
